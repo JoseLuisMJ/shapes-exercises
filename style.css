@@ -43,15 +43,15 @@ section {
 }
 
 #round:hover {
-    background: #FF0000;
+    background: orangered;
 }
 
 #square:hover {
-    background: #5200FF;
+    background: green;
 }
 
 #triangle:hover {
-    border-bottom: 100px solid #ca8747;
+    border-bottom: 100px solid #ca47b6;
 }
 
 button {

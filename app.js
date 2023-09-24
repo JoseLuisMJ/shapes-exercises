@@ -1,34 +1,18 @@
-const round = disguiseRound;
-const square = disguiseSquare;
-const triangle = disguiseTriangle;
-const reset = buttonReset
+const roundElement = document.getElementById('round');
+const squareElement = document.getElementById('square');
+const triangleElement = document.getElementById('triangle');
 
-function disguiseRound() {
-    let round = document.getElementById('round');
-    round.style.top = '-20px'
-    round.style.display = 'none';
-}
+const btnReset = document.querySelector('#btnReset');
 
-function disguiseSquare() {
-    let square = document.getElementById('square');
-    square.style.top = '-20px'
-    square.style.display = 'none';
-}
+const figures = [roundElement, squareElement, triangleElement]
 
-function disguiseTriangle() {
-    let triangle = document.getElementById('triangle');
-    triangle.style.top = '-20px'
-    triangle.style.display = 'none';
-}
+figures.forEach( figura => {
+    
+    figura.addEventListener('click', (event) => {
+        event.target.hidden = true
+    })
+})
 
-buttonReset.addEventListener('click',resetAnimation);
-
-function buttonReset(){
-    round.style.top = roundInitialtop;
-    round.style.display = 'block';
-}
-
-let buttonReset = document.getElementById('buttonReset');
-buttonReset.addEventListener('click', function(){
-    console.log('se ha reseteado la animacion');
+btnReset.addEventListener('click', () => {
+    figures.forEach( figura => figura.hidden = false)
 })
